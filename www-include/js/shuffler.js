@@ -33,7 +33,7 @@
 		for (var n = 0; n < words.length; n++) {
 			if (words[n].length < 4) continue;
 
-			words[n] = words[n].replace(/^(.)(.+)(.)$/, function (str, firstLetter, toShuffle, lastLetter, offset, s) {
+			words[n] = words[n].replace(/^[^a-zA-Zа-яА-Я]*(.)([a-zA-Zа-яА-Я-]+?)(.)[^a-zA-Zа-яА-Я]*$/, function (str, firstLetter, toShuffle, lastLetter, offset, s) {
 				var saver = 3,
 						newWord = s;
 
